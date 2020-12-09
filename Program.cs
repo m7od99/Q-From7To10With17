@@ -6,7 +6,7 @@ namespace newQuestions
     {
         static void Main(string[] args)
         {
-
+            Encoder.Coder(); // done
         }
 
     }
