@@ -6,7 +6,9 @@ namespace newQuestions
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+
         }
+
     }
+    
 }
