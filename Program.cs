@@ -1,21 +1,18 @@
 ﻿using System;
-using System.Linq;
 using System.Collections.Generic;
+using System.Linq;
 
-namespace newQuestions
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            int[] d = {50,45,30,1,10,100,56,50,50};
-            var c =QuickSort.Sort(d); // 
-            foreach(var item in c)
+namespace newQuestions {
+    class Program {
+        static void Main (string[] args) {
+            for (int i = 0; i < 100; i++)
             {
-                Console.WriteLine(item);
+                Console.WriteLine (Util.TestIsSorted ());
             }
+                
+
         }
 
     }
-    
+
 }
