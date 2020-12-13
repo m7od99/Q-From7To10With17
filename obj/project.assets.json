@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\m7od9\\Desktop\\practice GitGithub\\newQuestions\\newQuestions.csproj",
+      "projectUniqueName": "C:\\Users\\m7od9\\Desktop\\practice GitGithub\\from7to10with17\\newQuestions.csproj",
       "projectName": "newQuestions",
-      "projectPath": "C:\\Users\\m7od9\\Desktop\\practice GitGithub\\newQuestions\\newQuestions.csproj",
+      "projectPath": "C:\\Users\\m7od9\\Desktop\\practice GitGithub\\from7to10with17\\newQuestions.csproj",
       "packagesPath": "C:\\Users\\m7od9\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\m7od9\\Desktop\\practice GitGithub\\newQuestions\\obj\\",
+      "outputPath": "C:\\Users\\m7od9\\Desktop\\practice GitGithub\\from7to10with17\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\m7od9\\AppData\\Roaming\\NuGet\\NuGet.Config"
