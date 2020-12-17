@@ -19,8 +19,21 @@ namespace newQuestions {
             Console.WriteLine ();
 
             for (int i = 0; i < 10; i++) { // test Summation
-                Console.Write (Util.TestIsSummation ()+" "); // true
+                Console.Write (Util.TestIsSummation () + " "); // true
             }
+
+            Console.WriteLine ();
+
+            for (int i = 0; i < 10; i++) {
+                Console.Write (Util.TestIsEncoded () + " "); // true
+            }
+           Console.WriteLine();
+            
+            for (int i = 0; i < 10; i++)
+            {
+                  Console.Write (Util.TestIsFibonacci () + " "); // true
+            }
+            
 
         }
 

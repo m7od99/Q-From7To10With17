@@ -34,8 +34,7 @@ namespace newQuestions {
             }
             return true;
         }
-        public static bool TestIsSummation()
-        {
+        public static bool TestIsSummation () {
             var x = new Random ().Next (1, 10000);
             var Summation = 0;
             for (int i = 0; i <= x; i++) {
@@ -45,6 +44,39 @@ namespace newQuestions {
                 return false;
             }
             return true;
+        }
+
+        public static bool TestIsEncoded () {
+            var x = new Random ().Next (100, 1000).ToString ();
+            var xX = Encoder.EnCoder (x);
+            if (x != Encoder.DeCoder (xX)) {
+                return false;
+            }
+            return true;
+        }
+
+        public static bool TestIsFibonacci()
+        {
+            var x = new Random().Next(1,20);
+            if (Fibonacci(x) ==Recursion.Fibonacci(x) )
+            {
+                return true;
+            }
+            else return false;
+        }
+
+        public static int Fibonacci(int number)
+        {
+            var x = 0;
+            var y = 1;
+            var result = 0;
+            for (int i = 0; i <= number; i++)
+            {
+                result =  result + x;
+                x = y ;
+                y = result ;
+            }
+            return result ;
         }
     }
 }
