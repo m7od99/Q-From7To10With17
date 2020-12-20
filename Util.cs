@@ -78,5 +78,15 @@ namespace newQuestions {
             }
             return result ;
         }
+        public static bool TestMergeSoet () {
+            var x = RandomIntArray ();
+            x = MergeSorter.MergeSort (x);
+            for (int i = x.Length - 1; i > 0; i--) {
+                if (x[i] < x[i - 1]) {
+                    return false;
+                }
+            }
+            return true;
+        }
     }
 }

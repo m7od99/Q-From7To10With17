@@ -32,10 +32,15 @@ namespace newQuestions {
             for (int i = 0; i < 10; i++) {
                 Console.Write (Util.TestIsFibonacci () + " "); // true
             }
-            System.Console.WriteLine ();
+            Console.WriteLine ();
 
+            for (int i = 0; i < 10; i++)
+            {
+                Console.Write (Util.TestMergeSoet () + " "); // true
+            }
+
+            Console.WriteLine();
         }
-
     }
 
 }
