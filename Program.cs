@@ -27,13 +27,12 @@ namespace newQuestions {
             for (int i = 0; i < 10; i++) {
                 Console.Write (Util.TestIsEncoded () + " "); // true
             }
-           Console.WriteLine();
-            
-            for (int i = 0; i < 10; i++)
-            {
-                  Console.Write (Util.TestIsFibonacci () + " "); // true
+            Console.WriteLine ();
+
+            for (int i = 0; i < 10; i++) {
+                Console.Write (Util.TestIsFibonacci () + " "); // true
             }
-            
+            System.Console.WriteLine ();
 
         }
 
