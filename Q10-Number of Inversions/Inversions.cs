@@ -30,59 +30,29 @@ namespace newQuestions {
             return counter;
         }
 
-        public static int CountInversion (List<int> numbers) {
+        //Part 1 : CountInversion() *Split*
 
-            if (numbers.Count == 1) return 0;
+        //base case 
 
-            var mid = numbers.Count / 2;
-            var left = new List<int> ();
-            var right = new List<int> ();
+        //creat int midle , list left and right .
 
-            left = SplitLeft (numbers, left, mid);
-            right = SplitRight (numbers, right, mid);
+        //left is input list until midle and right is numbers after midle .
 
-            var i = CountInversion (left) + CountInversion (right);
+        //Initialize int counter that equle CountInversion(left) + CountInversion(right).
 
-            left = MergeSorter.MergeSort (left.ToArray ()).ToList ();
-            right = MergeSorter.MergeSort (right.ToArray ()).ToList ();
+        //sort left and right .
 
-            return Count (left, right, i);
-        }
+        // return count(left , right , counter).
 
-        private static int Count (List<int> left, List<int> right, int i) {
+        //Part 2 : Count().
 
-            var x = 0;
-            var y = 0;
+        //creat int x and y .
 
-            while (left.Count - 1 >= x && right.Count - 1 >= y)
-             {
-                if (left[x] <= right[y]) x++;
+        //while left and right not empty compere them .
 
-                else
-                {
-                    i = i + left.Count - x;
-                    y++;
-                }
-            }
-            return i;
-        }
+        //if right smaller then left counter = counter + left.size - x . 
 
-        public static List<int> SplitLeft (List<int> numbers, List<int> left, int midle) {
-            var x = 0;
-            while (x < midle) {
-                left.Add (numbers[x]);
-                x++;
-            }
-            return left;
-        }
-        public static List<int> SplitRight (List<int> numbers, List<int> right, int mid) {
-
-            while (numbers.Count - 1 >= mid) {
-                right.Add (numbers[mid]);
-                mid++;
-            }
-            return right;
-        }
+        //return counter .
 
     }
 }
