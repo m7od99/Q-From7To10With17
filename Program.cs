@@ -40,10 +40,11 @@ namespace newQuestions {
             }
 
             Console.WriteLine();
-            var test = new List<int>() {2,1,3};
+            var test = new List<int>() {3,2,1,6,9,0,10,5};
             Console.WriteLine(Inversions.NumberOfInversions(test));
-            
+           
         }
+     
     }
 
 }
