@@ -31,28 +31,64 @@ namespace newQuestions {
         }
 
         //Part 1 : CountInversion() *Split*
+        public static int CountInversion (List<int> numbers) {
+            //base case 
+            if (numbers.Count == 1) return 0;
 
-        //base case 
+            //creat int midle , list left and right .
+            var mid = numbers.Count / 2;
+            var left = new List<int> ();
+            var right = new List<int> ();
 
-        //creat int midle , list left and right .
+            //left is input list until midle and right is numbers after midle .
+            left = SplitLeft (numbers, left, mid);
+            right = SplitRight (numbers, right, mid);
 
-        //left is input list until midle and right is numbers after midle .
+            //Initialize int counter that equle CountInversion(left) + CountInversion(right).
+            var counter = CountInversion (left) + CountInversion (right);
 
-        //Initialize int counter that equle CountInversion(left) + CountInversion(right).
+            //sort left and right .
+            left = MergeSorter.MergeSort (left.ToArray ()).ToList ();
+            right = MergeSorter.MergeSort (right.ToArray ()).ToList ();
 
-        //sort left and right .
-
-        // return count(left , right , counter).
+            // return count(left , right , counter).
+            return Count (left, right, counter);
+        }
 
         //Part 2 : Count().
+        private static int Count (List<int> left, List<int> right, int counter) {
+            //creat int x and y .
+            var x = 0;
+            var y = 0;
 
-        //creat int x and y .
+            //while left and right not empty compere them .
+            while (left.Count - 1 >= x && right.Count - 1 >= y) {
+                //if right smaller then left counter = counter + left.size - x .  
+                if (right[y] < left[x]) {
+                    counter = counter + left.Count - x;
+                    y++;
+                } else x++;
+            }
 
-        //while left and right not empty compere them .
+            //return counter .
+            return counter;
+        }
+        public static List<int> SplitLeft (List<int> numbers, List<int> left, int midle) {
+            var x = 0;
+            while (x < midle) {
+                left.Add (numbers[x]);
+                x++;
+            }
+            return left;
+        }
+        public static List<int> SplitRight (List<int> numbers, List<int> right, int mid) {
 
-        //if right smaller then left counter = counter + left.size - x . 
-
-        //return counter .
+            while (numbers.Count - 1 >= mid) {
+                right.Add (numbers[mid]);
+                mid++;
+            }
+            return right;
+        }
 
     }
 }
