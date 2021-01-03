@@ -34,17 +34,23 @@ namespace newQuestions {
             }
             Console.WriteLine ();
 
-            for (int i = 0; i < 10; i++)
-            {
+            for (int i = 0; i < 10; i++) {
                 Console.Write (Util.TestMergeSoet () + " "); // true
             }
 
-            Console.WriteLine();
-            var test = new List<int>() {3,2,1,6,9,0,10,5};
-            Console.WriteLine(Inversions.NumberOfInversions(test));
-           
+            Console.WriteLine ();
+
+            for (int i = 0; i < 10; i++) {
+                Console.Write (Util.TestInversions () + " "); // true
+            }
+            Console.WriteLine ();
+
+            for (int i = 0; i < 10; i++) {
+                Console.Write (Util.TestCountInversions () + " "); // true 
+            }
+
         }
-     
+
     }
 
 }
