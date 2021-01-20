@@ -48,7 +48,17 @@ namespace newQuestions {
             for (int i = 0; i < 10; i++) {
                 Console.Write (Util.TestCountInversions () + " "); // true 
             }
+            Console.WriteLine ();
 
+            for (int i = 0; i < 10; i++) {
+                Console.Write (Util.TestInversionsTwo () + " "); // true 
+            }
+
+            Console.WriteLine ();
+
+            for (int i = 0; i < 10; i++) {
+                Console.Write (TestInversions.TestIsRight () + " "); // true 
+            }
         }
 
     }

@@ -10,7 +10,7 @@ namespace newQuestions {
         public List<int> Sorted { get; set; }
 
         public static int NumberOfInversions (List<int> number) {
-            var numbers = CopyList(number);
+            var numbers = CopyList (number);
             //0-Initialize counter that count inversions . 
             var counter = 0;
             var i = numbers.Count - 1;
@@ -57,7 +57,7 @@ namespace newQuestions {
         }
 
         //Part 2 : Count().
-        private static int Count (List<int> left, List<int> right, int counter) {
+        public static int Count (List<int> left, List<int> right, int counter) {
             //creat int x and y .
             var x = 0;
             var y = 0;
@@ -90,12 +90,10 @@ namespace newQuestions {
             }
             return right;
         }
-        public static List<int> CopyList(List<int> numbers)
-        {
-            var copy = new List<int>();
-            foreach(var num in numbers)
-            {
-                copy.Add(num);
+        public static List<int> CopyList (List<int> numbers) {
+            var copy = new List<int> ();
+            foreach (var num in numbers) {
+                copy.Add (num);
             }
             return copy;
         }

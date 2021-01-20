@@ -108,6 +108,19 @@ namespace newQuestions {
             return false;
         }
 
+        public static bool TestInversionsTwo () {
+            var numbers = RandomIntArray ().ToList ();
+            numbers = MergeSorter.MergeSort (numbers.ToArray ()).ToList ();
+
+            var x = new Random ().Next (1, 5);
+            var y = new Random ().Next (6, 10);
+            var counter = 0;
+
+            if (counter == Inversions.NumberOfInversions (numbers)) {
+                return true;
+            } else return false;
+        }
+
         //****************************************************************
         // test Q 17 encoder 
         //****************************************************************

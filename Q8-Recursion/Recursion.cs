@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 namespace newQuestions {
     public class Recursion {
         public static int Factorial (int n) {
@@ -11,11 +12,13 @@ namespace newQuestions {
         }
 
         public static int Fibonacci(int n ){
-            if (n == 1 || n == 2)
+            if (_memo.ContainsKey(n))
             {
-                return 1 ;
+                return _memo[n] ;
             }
-           return n =Fibonacci(n-2) + Fibonacci(n-1);
+            _memo[n] =Fibonacci(n-2) + Fibonacci(n-1);
+            return  _memo[n];
         }
+        public static Dictionary<int , int > _memo =  new Dictionary<int, int>{{0,0} , {1,1}};
     }
 }
